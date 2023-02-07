@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Ds.H</title>
+    <link>https://example.com/tags/android/</link>
+    <description>Recent content in Android on Ds.H</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MacOS使用Nexus3</title>
+      <link>https://example.com/posts/macos%E4%BD%BF%E7%94%A8nexus3.3%E6%90%AD%E5%BB%BAmaven%E7%A7%81%E6%9C%8D%E4%BB%A5%E5%8F%8Aandroid%E7%9A%84%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B/</link>
+      <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/macos%E4%BD%BF%E7%94%A8nexus3.3%E6%90%AD%E5%BB%BAmaven%E7%A7%81%E6%9C%8D%E4%BB%A5%E5%8F%8Aandroid%E7%9A%84%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B/</guid>
+      <description>操作系统: MacOS(Bigbur)
+一. 关于Nexus 1. Nexus是什么 nexus是一个强大的maven仓库管理器,它极大的简化了本地内部仓库的维护和外部仓库的访问. nexus是一套开箱即用的系统不需要数据库,它使用文件系统加Lucene来组织数据nexus使用ExtJS来开发界面,利用Restlet来提供完整的REST APIs,通过IDEA和Eclipse集成使用nexus支持webDAV与LDAP安全身份认证.nexus提供了强大的仓库管理功能,构件搜索功能,它基于REST,友好的UI是一个extjs的REST客户端,占用较少的内存,基于简单文件系统而非数据库.
+2016 年 4 月 6 日 Nexus 3.0 版本发布，相较 2.x 版本有了很大的改变：
+  对低层代码进行了大规模重构，提升性能，增加可扩展性以及改善用户体验。
+  升级界面，极大的简化了用户界面的操作和管理。
+  提供新的安装包，让部署更加简单。
+  增加对 Docker, NeGet, npm, Bower 的支持。
+  提供新的管理接口，以及增强对自动任务的管理。
+  1. Nexus作用 nexus是一种特殊的maven仓库, 一般用于公司, 比如公司员工开发项目, 需要每个人都去互联网上下载jar包, 这个如果外网网速不太好的好, 是比较痛苦的, 而且如果把自己的jar包上传到外部服务器,这个也是比较危险的, 此时,公司就需要搭建一个私服, 可以提供大家去私服下载jar包, 而且开发人员封装好自己的工具以后, 也可以直接发布到私服上, 其他的开发人员有额可以直接下载下来. 总结一下，就是减少多个本地仓库频繁去下载远程仓库的同一个库，Nexus会把远程库下载到私服缓存，另外就是用于公司内部库开发同步和版本管理。
+二. Nexus安装 官网地址：https://www.sonatype.com/nexus/repository-oss-download
+1. 解压配置 解压得到nexus-3.30.0-01和sonatype-work两个文件夹
+vim nexus-3.30.0-01/etc/nexus-default.properties ## DO NOT EDIT - CUSTOMIZATIONS BELONG IN $data-dir/etc/nexus.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Ds.H</title>
+    <link>https://example.com/tags/java/</link>
+    <description>Recent content in Java on Ds.H</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CentOS 7.x使用yum安装JDK1.8</title>
+      <link>https://example.com/posts/centos-7.x%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85jdk1.8/</link>
+      <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/centos-7.x%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85jdk1.8/</guid>
+      <description>操作系统: Centos 7.x
+一. 安装JDK 1. yum源查找JDK版本安装包 查找所有java关键字匹配的安装包
+yum search java* 查找java1.8版本相关的安装包
+yum search java-1.8 使用OpenJDK Development Environment对应的安装包：开发版本 JDK 不要使用OpenJDK Runtime Environment对应的安装包：只有java运行环境 JRE
+2. 安装JDK yum -y install java-1.8.0-openjdk-devel.x86_64 二. 配置环境变量 vim ~/.bash_profile 配置以下内容
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-1.el7_9.x86_64 export CLASSPATH=.:$JAVA_HOME/lib PATH=$JAVA_HOME/bin:$PATH source一下，使配置生效
+source ~/.bash_profile 测试是否安装完成： 任意目录下执行命令：javac java 安毕。。。。</description>
+    </item>
+    
+  </channel>
+</rss>

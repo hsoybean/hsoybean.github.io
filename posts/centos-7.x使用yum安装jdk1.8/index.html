@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <title>CentOS 7.x使用yum安装JDK1.8 // Ds.H</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ds.H" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.3c3c186cd62e563ad6e2f00a89dbee656ab912d1d46f856b5605dd0232521e2a.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CentOS 7.x使用yum安装JDK1.8"/>
+<meta name="twitter:description" content="操作系统: Centos 7.x
+一. 安装JDK 1. yum源查找JDK版本安装包 查找所有java关键字匹配的安装包
+yum search java* 查找java1.8版本相关的安装包
+yum search java-1.8 使用OpenJDK Development Environment对应的安装包：开发版本 JDK 不要使用OpenJDK Runtime Environment对应的安装包：只有java运行环境 JRE
+2. 安装JDK yum -y install java-1.8.0-openjdk-devel.x86_64 二. 配置环境变量 vim ~/.bash_profile 配置以下内容
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-1.el7_9.x86_64 export CLASSPATH=.:$JAVA_HOME/lib PATH=$JAVA_HOME/bin:$PATH source一下，使配置生效
+source ~/.bash_profile 测试是否安装完成： 任意目录下执行命令：javac java 安毕。。。。"/>
+
+    <meta property="og:title" content="CentOS 7.x使用yum安装JDK1.8" />
+<meta property="og:description" content="操作系统: Centos 7.x
+一. 安装JDK 1. yum源查找JDK版本安装包 查找所有java关键字匹配的安装包
+yum search java* 查找java1.8版本相关的安装包
+yum search java-1.8 使用OpenJDK Development Environment对应的安装包：开发版本 JDK 不要使用OpenJDK Runtime Environment对应的安装包：只有java运行环境 JRE
+2. 安装JDK yum -y install java-1.8.0-openjdk-devel.x86_64 二. 配置环境变量 vim ~/.bash_profile 配置以下内容
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-1.el7_9.x86_64 export CLASSPATH=.:$JAVA_HOME/lib PATH=$JAVA_HOME/bin:$PATH source一下，使配置生效
+source ~/.bash_profile 测试是否安装完成： 任意目录下执行命令：javac java 安毕。。。。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/centos-7.x%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85jdk1.8/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-07T00:00:00+00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://example.com"><img class="app-header-avatar" src="/images/avatar.jpg" alt="Ds.H" /></a>
+      <span class="app-header-title">Ds.H</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">主页</a>
+             . 
+          
+          <a class="app-header-menu-item" href="/tags/">标签</a>
+             . 
+          
+          <a class="app-header-menu-item" href="/about/">联系我</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">CentOS 7.x使用yum安装JDK1.8</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Feb 7, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://example.com/tags/centos/">centOS</a>
+              <a class="tag" href="https://example.com/tags/java/">Java</a>
+              <a class="tag" href="https://example.com/tags/%E5%BC%80%E5%8F%91/">开发</a>
+              <a class="tag" href="https://example.com/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>操作系统: Centos 7.x</p>
+<h2 id="一--安装jdk">一.  安装JDK</h2>
+<h4 id="1-yum源查找jdk版本安装包">1. yum源查找JDK版本安装包</h4>
+<p>查找所有java关键字匹配的安装包</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum search java*
+</code></pre></div><p>查找java1.8版本相关的安装包</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum search java-1.8
+</code></pre></div><p><img src="https://www.championai.com/upload/2021/03/image-0f635ace04904e42aef8d8f416b0890d.png" alt="image.png">
+使用OpenJDK Development Environment对应的安装包：开发版本 JDK
+不要使用OpenJDK Runtime Environment对应的安装包：只有java运行环境 JRE</p>
+<h4 id="2-安装jdk">2. 安装JDK</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum -y install java-1.8.0-openjdk-devel.x86_64
+</code></pre></div><h2 id="二--配置环境变量">二.  配置环境变量</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim ~/.bash_profile
+</code></pre></div><p>配置以下内容</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export JAVA_HOME<span style="color:#f92672">=</span>/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-1.el7_9.x86_64
+export CLASSPATH<span style="color:#f92672">=</span>.:$JAVA_HOME/lib
+PATH<span style="color:#f92672">=</span>$JAVA_HOME/bin:$PATH
+</code></pre></div><p>source一下，使配置生效</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">source ~/.bash_profile
+</code></pre></div><!-- raw HTML omitted -->
+<p>测试是否安装完成：
+任意目录下执行命令：javac java
+<img src="https://www.championai.com/upload/2021/03/image-ba679c46cc214a90ac6307388509a945.png" alt="image.png"></p>
+<p><img src="https://www.championai.com/upload/2021/03/image-8ca38571da5b457dac927ea2d02c2476.png" alt="image.png"></p>
+<p>安毕。。。。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

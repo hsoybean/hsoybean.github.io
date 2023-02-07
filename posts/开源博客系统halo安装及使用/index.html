@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <title>开源博客系统Halo安装及使用 // Ds.H</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ds.H" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.3c3c186cd62e563ad6e2f00a89dbee656ab912d1d46f856b5605dd0232521e2a.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="开源博客系统Halo安装及使用"/>
+<meta name="twitter:description" content="操作系统: Centos 7.x
+一. 安装宝塔面板 1. 更新yum yum update 2. 使用yum安装面板 官方安装文档：https://www.bt.cn/bbs/thread-19376-1-1.html
+yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh 出现以上信息，说明宝塔面板已经安装完成。 根据信息内容中的外网面板地址在浏览器打开,输入username和password登陆面板。（如果忘记username和password，可以在服务器linux命令行使用 bt default来查看） 第一次登陆进面板之后，会有个提示安装LNMP和LAMP的环境套件，这里我选择LNMP（linux Nginx mySql PHP），安装方式选择“极速安装”，点击一键安装。
+二. 安装Docker 官网安装文档：https://docs.docker.com/engine/install/centos/#uninstall-old-versions
+1. 卸载老版本的Docer sudo yum remove docker \ 	docker-client \ 	docker-client-latest \ 	docker-common \ 	docker-latest \ 	docker-latest-logrotate \ 	docker-logrotate \ 	docker-engine 2. 配置docker仓库 yum install -y yum-utils sudo yum-config-manager \ 	--add-repo \  https://download."/>
+
+    <meta property="og:title" content="开源博客系统Halo安装及使用" />
+<meta property="og:description" content="操作系统: Centos 7.x
+一. 安装宝塔面板 1. 更新yum yum update 2. 使用yum安装面板 官方安装文档：https://www.bt.cn/bbs/thread-19376-1-1.html
+yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh 出现以上信息，说明宝塔面板已经安装完成。 根据信息内容中的外网面板地址在浏览器打开,输入username和password登陆面板。（如果忘记username和password，可以在服务器linux命令行使用 bt default来查看） 第一次登陆进面板之后，会有个提示安装LNMP和LAMP的环境套件，这里我选择LNMP（linux Nginx mySql PHP），安装方式选择“极速安装”，点击一键安装。
+二. 安装Docker 官网安装文档：https://docs.docker.com/engine/install/centos/#uninstall-old-versions
+1. 卸载老版本的Docer sudo yum remove docker \ 	docker-client \ 	docker-client-latest \ 	docker-common \ 	docker-latest \ 	docker-latest-logrotate \ 	docker-logrotate \ 	docker-engine 2. 配置docker仓库 yum install -y yum-utils sudo yum-config-manager \ 	--add-repo \  https://download." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9Fhalo%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-07T00:00:00+00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://example.com"><img class="app-header-avatar" src="/images/avatar.jpg" alt="Ds.H" /></a>
+      <span class="app-header-title">Ds.H</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">主页</a>
+             . 
+          
+          <a class="app-header-menu-item" href="/tags/">标签</a>
+             . 
+          
+          <a class="app-header-menu-item" href="/about/">联系我</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">开源博客系统Halo安装及使用</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Feb 7, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://example.com/tags/%E5%BB%BA%E7%AB%99/">建站</a>
+              <a class="tag" href="https://example.com/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+              <a class="tag" href="https://example.com/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>操作系统: Centos 7.x</p>
+<h2 id="一--安装宝塔面板">一.  安装宝塔面板</h2>
+<h4 id="1-更新yum">1. 更新yum</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum update
+</code></pre></div><h4 id="2-使用yum安装面板">2. 使用yum安装面板</h4>
+<p>官方安装文档：https://www.bt.cn/bbs/thread-19376-1-1.html</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum install -y wget <span style="color:#f92672">&amp;&amp;</span> wget -O install.sh 
+http://download.bt.cn/install/install_6.0.sh <span style="color:#f92672">&amp;&amp;</span> sh install.sh
+</code></pre></div><p><img src="https://www.championai.com/upload/2021/03/1616937001085-1e3b1d37d16145c28907cdd137818ab5.jpg" alt="1616937001085.jpg"></p>
+<p>出现以上信息，说明宝塔面板已经安装完成。
+根据信息内容中的外网面板地址在浏览器打开,输入username和password登陆面板。（如果忘记username和password，可以在服务器linux命令行使用 bt default来查看）
+第一次登陆进面板之后，会有个提示安装LNMP和LAMP的环境套件，这里我选择LNMP（linux Nginx mySql PHP），安装方式选择“极速安装”，点击一键安装。</p>
+<h2 id="二-安装docker">二. 安装Docker</h2>
+<p>官网安装文档：https://docs.docker.com/engine/install/centos/#uninstall-old-versions</p>
+<h4 id="1-卸载老版本的docer">1. 卸载老版本的Docer</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo yum remove docker <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	docker-client <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	docker-client-latest <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	docker-common <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	docker-latest <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	docker-latest-logrotate <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	docker-logrotate <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	docker-engine
+</code></pre></div><h4 id="2-配置docker仓库">2. 配置docker仓库</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum install -y yum-utils
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo yum-config-manager <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>		--add-repo <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    	https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre></div><h4 id="3-安装docker引擎">3. 安装Docker引擎</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo yum install docker-ce docker-ce-cli containerd.io
+</code></pre></div><p>命令行显示“完毕”，此时Docker已经安装完成，但是还没有Docker服务还没有启动。</p>
+<h4 id="4-启动docker">4. 启动Docker</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo systemctl start docker
+</code></pre></div><h4 id="5-运行一个hello-world镜像验证docker是否正常运行">5. 运行一个hello-world镜像验证Docker是否正常运行</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo docker run hello-world    
+</code></pre></div><h4 id="6-为docker设置开机启动">6. 为Docker设置开机启动</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">systemctl enable docker
+</code></pre></div><h2 id="三-安装halo">三. 安装Halo</h2>
+<p>官网安装文档：https://docs.halo.run/zh/install/index</p>
+<p>以下选择用Docer的方式进行安装Halo：</p>
+<h4 id="1--创建工作目录">1.  创建工作目录</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mkdir ~/.halo <span style="color:#f92672">&amp;&amp;</span> cd ~/.halo
+</code></pre></div><h4 id="2-下载示例配置文件到工作目录下载完成之后可以使用vimvim-applicationyaml-编辑配置文件配置数据库或者端口等">2. 下载示例配置文件到工作目录(下载完成之后可以使用vimvim application.yaml 编辑配置文件，配置数据库或者端口等)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wget https://dl.halo.run/config/application-template.yaml -O ./application.yaml
+</code></pre></div><h4 id="3-拉取最新的-halo-镜像">3. 拉取最新的 Halo 镜像</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull halohub/halo
+</code></pre></div><h4 id="4-创建容器">4. 创建容器</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -it -d --name halo -p 8090:8090 -v ~/.halo:/root/.halo --restart<span style="color:#f92672">=</span>always halohub/halo
+</code></pre></div><h4 id="5-halo安装引导界面">5. Halo安装引导界面</h4>
+<p>打开http://外网ip:端口号，即可看到安装引导界面
+如果打不开，请前往服务器的安全组开放8090端口后重试</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

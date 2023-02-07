@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <title>Centos安装shadowsock客户端配合privoxy实现Linux全局代理 // Ds.H</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ds.H" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.3c3c186cd62e563ad6e2f00a89dbee656ab912d1d46f856b5605dd0232521e2a.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Centos安装shadowsock客户端配合privoxy实现Linux全局代理"/>
+<meta name="twitter:description" content="操作系统: Centos 7.x
+一. 安装Shadowsocks客户端 1. 安装epel source(这个用于自动配置yum仓库)和pip(python包管理工具) sudo yum -y install epel-release sudo yum -y install python-pip 2. 安装Shadowsocks客户端 sudo pip install shadowsocks 二. 配置Shadowsocks 1.新建配置文件 sudo mkdir /etc/shadowsocks sudo vim /etc/shadowsocks/shadowsocks.json 2.在shadowsocks.json文件中添加配置信息 { &#34;server&#34;:&#34;x.x.x.x&#34;, # 代理服务器地址 &#34;server_port&#34;:1035, # 代理服务器端口 &#34;local_address&#34;: &#34;127.0.0.1&#34;, # 本地ip &#34;local_port&#34;:1080, # 本地端口 &#34;password&#34;:&#34;password&#34;, # 服务器连接密码 &#34;timeout&#34;:300, # 等待超时 &#34;method&#34;:&#34;aes-256-cfb&#34;, # 协议加密方式 &#34;fast_open&#34;: false, # true快速打开以减少延时，但是要求Linux内核是3.7&#43; &#34;workers&#34;: 1 # 工作线程数量 } 3.开启shadowsocks，添加自启动 sudo mkdir /etc/systemd/system/shadowsocks.service vim /etc/systemd/system/shadowsocks."/>
+
+    <meta property="og:title" content="Centos安装shadowsock客户端配合privoxy实现Linux全局代理" />
+<meta property="og:description" content="操作系统: Centos 7.x
+一. 安装Shadowsocks客户端 1. 安装epel source(这个用于自动配置yum仓库)和pip(python包管理工具) sudo yum -y install epel-release sudo yum -y install python-pip 2. 安装Shadowsocks客户端 sudo pip install shadowsocks 二. 配置Shadowsocks 1.新建配置文件 sudo mkdir /etc/shadowsocks sudo vim /etc/shadowsocks/shadowsocks.json 2.在shadowsocks.json文件中添加配置信息 { &#34;server&#34;:&#34;x.x.x.x&#34;, # 代理服务器地址 &#34;server_port&#34;:1035, # 代理服务器端口 &#34;local_address&#34;: &#34;127.0.0.1&#34;, # 本地ip &#34;local_port&#34;:1080, # 本地端口 &#34;password&#34;:&#34;password&#34;, # 服务器连接密码 &#34;timeout&#34;:300, # 等待超时 &#34;method&#34;:&#34;aes-256-cfb&#34;, # 协议加密方式 &#34;fast_open&#34;: false, # true快速打开以减少延时，但是要求Linux内核是3.7&#43; &#34;workers&#34;: 1 # 工作线程数量 } 3.开启shadowsocks，添加自启动 sudo mkdir /etc/systemd/system/shadowsocks.service vim /etc/systemd/system/shadowsocks." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/centos%E5%AE%89%E8%A3%85shadowsock%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E5%90%88privoxy%E5%AE%9E%E7%8E%B0linux%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-07T00:00:00+00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://example.com"><img class="app-header-avatar" src="/images/avatar.jpg" alt="Ds.H" /></a>
+      <span class="app-header-title">Ds.H</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">主页</a>
+             . 
+          
+          <a class="app-header-menu-item" href="/tags/">标签</a>
+             . 
+          
+          <a class="app-header-menu-item" href="/about/">联系我</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Centos安装shadowsock客户端配合privoxy实现Linux全局代理</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Feb 7, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://example.com/tags/centos/">centOS</a>
+              <a class="tag" href="https://example.com/tags/linux/">Linux</a>
+              <a class="tag" href="https://example.com/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a>
+              <a class="tag" href="https://example.com/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>操作系统: Centos 7.x</p>
+<h2 id="一--安装shadowsocks客户端">一.  安装Shadowsocks客户端</h2>
+<h4 id="1-安装epel-source这个用于自动配置yum仓库和pippython包管理工具">1. 安装epel source(这个用于自动配置yum仓库)和pip(python包管理工具)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo yum -y install epel-release
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo yum -y install python-pip
+</code></pre></div><h4 id="2-安装shadowsocks客户端">2. 安装Shadowsocks客户端</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pip install shadowsocks 
+</code></pre></div><h2 id="二-配置shadowsocks">二. 配置Shadowsocks</h2>
+<h4 id="1新建配置文件">1.新建配置文件</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo mkdir /etc/shadowsocks
+sudo vim /etc/shadowsocks/shadowsocks.json
+</code></pre></div><h4 id="2在shadowsocksjson文件中添加配置信息">2.在shadowsocks.json文件中添加配置信息</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">{</span>
+    <span style="color:#e6db74">&#34;server&#34;</span>:<span style="color:#e6db74">&#34;x.x.x.x&#34;</span>,  <span style="color:#75715e"># 代理服务器地址</span>
+    <span style="color:#e6db74">&#34;server_port&#34;</span>:1035,  <span style="color:#75715e"># 代理服务器端口</span>
+    <span style="color:#e6db74">&#34;local_address&#34;</span>: <span style="color:#e6db74">&#34;127.0.0.1&#34;</span>, <span style="color:#75715e"># 本地ip</span>
+    <span style="color:#e6db74">&#34;local_port&#34;</span>:1080,  <span style="color:#75715e"># 本地端口</span>
+    <span style="color:#e6db74">&#34;password&#34;</span>:<span style="color:#e6db74">&#34;password&#34;</span>, <span style="color:#75715e"># 服务器连接密码</span>
+    <span style="color:#e6db74">&#34;timeout&#34;</span>:300,  <span style="color:#75715e"># 等待超时</span>
+    <span style="color:#e6db74">&#34;method&#34;</span>:<span style="color:#e6db74">&#34;aes-256-cfb&#34;</span>,  <span style="color:#75715e"># 协议加密方式</span>
+    <span style="color:#e6db74">&#34;fast_open&#34;</span>: false,  <span style="color:#75715e"># true快速打开以减少延时，但是要求Linux内核是3.7+</span>
+    <span style="color:#e6db74">&#34;workers&#34;</span>: <span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 工作线程数量</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="3开启shadowsocks添加自启动">3.开启shadowsocks，添加自启动</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo mkdir /etc/systemd/system/shadowsocks.service
+vim /etc/systemd/system/shadowsocks.service 
+</code></pre></div><p>　为shadowsocks添加服务：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>Unit<span style="color:#f92672">]</span>
+Description<span style="color:#f92672">=</span>Shadowsocks
+<span style="color:#f92672">[</span>Service<span style="color:#f92672">]</span>
+TimeoutStartSec<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+ExecStart<span style="color:#f92672">=</span>/usr/bin/sslocal -c /etc/shadowsocks/shadowsocks.json
+<span style="color:#f92672">[</span>Install<span style="color:#f92672">]</span>
+WantedBy<span style="color:#f92672">=</span>multi-user.target
+</code></pre></div><p>　开启shadowsocks服务,添加开机自启动：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">systemctl enable shadowsocks.service
+systemctl start shadowsocks.service
+systemctl status shadowsocks.service
+</code></pre></div><p>　验证服务是否运行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> curl --socks5 127.0.0.1:1080 http://httpbin.org/ip
+</code></pre></div><p>　如果出现以下信息说明运行成功：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">{</span>
+  <span style="color:#e6db74">&#34;origin&#34;</span>: <span style="color:#e6db74">&#34;x.x.x.x&#34;</span>       <span style="color:#75715e"># 你的服务器地址</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="三-安装配置privoxy">三. 安装配置privoxy</h2>
+<p>由于Shadowsocks是sock5类型代理，需要使用privoxy将http、https流量转发到本地端口</p>
+<h4 id="1-安装privoxy">1. 安装privoxy</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum install privoxy -y
+systemctl enable privoxy
+systemctl start privoxy
+systemctl status privoxy
+</code></pre></div><h4 id="2-配置privoxy">2. 配置privoxy</h4>
+<p>　修改配置文件,确保一下内容没有被注释，如果注释了，去掉前面#号打开</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vim /etc/privoxy/config
+listen-address 127.0.0.1:8118 <span style="color:#75715e"># 8118是默认的privoxy端口</span>
+forward-socks5t / 127.0.0.1:1080 . <span style="color:#75715e">#转发到本地socks5端口</span>
+</code></pre></div><h4 id="3-设置http和https端口">3. 设置http和https端口</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vi /etc/profile
+</code></pre></div><p>　编辑/etc/profile文件，在文件尾部添加一下信息：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">PROXY_HOST<span style="color:#f92672">=</span>127.0.0.1
+export all_proxy<span style="color:#f92672">=</span>http://$PROXY_HOST:8118
+export ftp_proxy<span style="color:#f92672">=</span>http://$PROXY_HOST:8118
+export http_proxy<span style="color:#f92672">=</span>http://$PROXY_HOST:8118
+export https_proxy<span style="color:#f92672">=</span>http://$PROXY_HOST:8118
+export no_proxy<span style="color:#f92672">=</span>localhost,172.16.0.0/16,192.168.0.0/16.,127.0.0.1,10.10.0.0/16
+</code></pre></div><p>　重载环境变量</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">source /etc/profile
+</code></pre></div><h4 id="4-测试代理">4. 测试代理</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -I www.google.com
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">HTTP/1.1 <span style="color:#ae81ff">200</span> OK
+Date: Fri, <span style="color:#ae81ff">26</span> Jan <span style="color:#ae81ff">2018</span> 05:32:37 GMT
+Expires: -1
+Cache-Control: private, max-age<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+Content-Type: text/html; charset<span style="color:#f92672">=</span>ISO-8859-1
+P3P: CP<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;This is not a P3P policy! See g.co/p3phelp for more info.&#34;</span>
+Server: gws
+X-XSS-Protection: 1; mode<span style="color:#f92672">=</span>block
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: 1P_JAR<span style="color:#f92672">=</span>2018-01-26-05; expires<span style="color:#f92672">=</span>Sun, 25-Feb-2018 05:32:37 GMT; path<span style="color:#f92672">=</span>/; domain<span style="color:#f92672">=</span>.google.com
+Set-Cookie: NID<span style="color:#f92672">=</span>122<span style="color:#f92672">=</span>PIiGck3gwvrrJSaiwkSKJ5UrfO4WtAO80T4yipOx4R4O0zcgOEdvsKRePWN1DFM66g8PPF4aouhY4JIs7tENdRm7H9hkq5xm4y1yNJ-sZzwVJCLY_OK37sfI5LnSBtb7; expires<span style="color:#f92672">=</span>Sat, 28-Jul-2018 05:32:37 GMT; path<span style="color:#f92672">=</span>/; domain<span style="color:#f92672">=</span>.google.com; HttpOnly
+Transfer-Encoding: chunked
+Accept-Ranges: none
+Vary: Accept-Encoding
+Proxy-Connection: keep-alive
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

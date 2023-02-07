@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 on Ds.H</title>
+    <link>https://example.com/tags/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on Ds.H</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CentOS 7.x使用yum安装JDK1.8</title>
+      <link>https://example.com/posts/centos-7.x%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85jdk1.8/</link>
+      <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/centos-7.x%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85jdk1.8/</guid>
+      <description>操作系统: Centos 7.x
+一. 安装JDK 1. yum源查找JDK版本安装包 查找所有java关键字匹配的安装包
+yum search java* 查找java1.8版本相关的安装包
+yum search java-1.8 使用OpenJDK Development Environment对应的安装包：开发版本 JDK 不要使用OpenJDK Runtime Environment对应的安装包：只有java运行环境 JRE
+2. 安装JDK yum -y install java-1.8.0-openjdk-devel.x86_64 二. 配置环境变量 vim ~/.bash_profile 配置以下内容
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-1.el7_9.x86_64 export CLASSPATH=.:$JAVA_HOME/lib PATH=$JAVA_HOME/bin:$PATH source一下，使配置生效
+source ~/.bash_profile 测试是否安装完成： 任意目录下执行命令：javac java 安毕。。。。</description>
+    </item>
+    
+    <item>
+      <title>Centos安装shadowsock客户端配合privoxy实现Linux全局代理</title>
+      <link>https://example.com/posts/centos%E5%AE%89%E8%A3%85shadowsock%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E5%90%88privoxy%E5%AE%9E%E7%8E%B0linux%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/centos%E5%AE%89%E8%A3%85shadowsock%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E5%90%88privoxy%E5%AE%9E%E7%8E%B0linux%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/</guid>
+      <description>操作系统: Centos 7.x
+一. 安装Shadowsocks客户端 1. 安装epel source(这个用于自动配置yum仓库)和pip(python包管理工具) sudo yum -y install epel-release sudo yum -y install python-pip 2. 安装Shadowsocks客户端 sudo pip install shadowsocks 二. 配置Shadowsocks 1.新建配置文件 sudo mkdir /etc/shadowsocks sudo vim /etc/shadowsocks/shadowsocks.json 2.在shadowsocks.json文件中添加配置信息 { &amp;#34;server&amp;#34;:&amp;#34;x.x.x.x&amp;#34;, # 代理服务器地址 &amp;#34;server_port&amp;#34;:1035, # 代理服务器端口 &amp;#34;local_address&amp;#34;: &amp;#34;127.0.0.1&amp;#34;, # 本地ip &amp;#34;local_port&amp;#34;:1080, # 本地端口 &amp;#34;password&amp;#34;:&amp;#34;password&amp;#34;, # 服务器连接密码 &amp;#34;timeout&amp;#34;:300, # 等待超时 &amp;#34;method&amp;#34;:&amp;#34;aes-256-cfb&amp;#34;, # 协议加密方式 &amp;#34;fast_open&amp;#34;: false, # true快速打开以减少延时，但是要求Linux内核是3.7+ &amp;#34;workers&amp;#34;: 1 # 工作线程数量 } 3.开启shadowsocks，添加自启动 sudo mkdir /etc/systemd/system/shadowsocks.service vim /etc/systemd/system/shadowsocks.</description>
+    </item>
+    
+    <item>
+      <title>MacOS使用Nexus3</title>
+      <link>https://example.com/posts/macos%E4%BD%BF%E7%94%A8nexus3.3%E6%90%AD%E5%BB%BAmaven%E7%A7%81%E6%9C%8D%E4%BB%A5%E5%8F%8Aandroid%E7%9A%84%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B/</link>
+      <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/macos%E4%BD%BF%E7%94%A8nexus3.3%E6%90%AD%E5%BB%BAmaven%E7%A7%81%E6%9C%8D%E4%BB%A5%E5%8F%8Aandroid%E7%9A%84%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B/</guid>
+      <description>操作系统: MacOS(Bigbur)
+一. 关于Nexus 1. Nexus是什么 nexus是一个强大的maven仓库管理器,它极大的简化了本地内部仓库的维护和外部仓库的访问. nexus是一套开箱即用的系统不需要数据库,它使用文件系统加Lucene来组织数据nexus使用ExtJS来开发界面,利用Restlet来提供完整的REST APIs,通过IDEA和Eclipse集成使用nexus支持webDAV与LDAP安全身份认证.nexus提供了强大的仓库管理功能,构件搜索功能,它基于REST,友好的UI是一个extjs的REST客户端,占用较少的内存,基于简单文件系统而非数据库.
+2016 年 4 月 6 日 Nexus 3.0 版本发布，相较 2.x 版本有了很大的改变：
+  对低层代码进行了大规模重构，提升性能，增加可扩展性以及改善用户体验。
+  升级界面，极大的简化了用户界面的操作和管理。
+  提供新的安装包，让部署更加简单。
+  增加对 Docker, NeGet, npm, Bower 的支持。
+  提供新的管理接口，以及增强对自动任务的管理。
+  1. Nexus作用 nexus是一种特殊的maven仓库, 一般用于公司, 比如公司员工开发项目, 需要每个人都去互联网上下载jar包, 这个如果外网网速不太好的好, 是比较痛苦的, 而且如果把自己的jar包上传到外部服务器,这个也是比较危险的, 此时,公司就需要搭建一个私服, 可以提供大家去私服下载jar包, 而且开发人员封装好自己的工具以后, 也可以直接发布到私服上, 其他的开发人员有额可以直接下载下来. 总结一下，就是减少多个本地仓库频繁去下载远程仓库的同一个库，Nexus会把远程库下载到私服缓存，另外就是用于公司内部库开发同步和版本管理。
+二. Nexus安装 官网地址：https://www.sonatype.com/nexus/repository-oss-download
+1. 解压配置 解压得到nexus-3.30.0-01和sonatype-work两个文件夹
+vim nexus-3.30.0-01/etc/nexus-default.properties ## DO NOT EDIT - CUSTOMIZATIONS BELONG IN $data-dir/etc/nexus.</description>
+    </item>
+    
+    <item>
+      <title>开源博客系统Halo安装及使用</title>
+      <link>https://example.com/posts/%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9Fhalo%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9Fhalo%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</guid>
+      <description>操作系统: Centos 7.x
+一. 安装宝塔面板 1. 更新yum yum update 2. 使用yum安装面板 官方安装文档：https://www.bt.cn/bbs/thread-19376-1-1.html
+yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;amp;&amp;amp; sh install.sh 出现以上信息，说明宝塔面板已经安装完成。 根据信息内容中的外网面板地址在浏览器打开,输入username和password登陆面板。（如果忘记username和password，可以在服务器linux命令行使用 bt default来查看） 第一次登陆进面板之后，会有个提示安装LNMP和LAMP的环境套件，这里我选择LNMP（linux Nginx mySql PHP），安装方式选择“极速安装”，点击一键安装。
+二. 安装Docker 官网安装文档：https://docs.docker.com/engine/install/centos/#uninstall-old-versions
+1. 卸载老版本的Docer sudo yum remove docker \ 	docker-client \ 	docker-client-latest \ 	docker-common \ 	docker-latest \ 	docker-latest-logrotate \ 	docker-logrotate \ 	docker-engine 2. 配置docker仓库 yum install -y yum-utils sudo yum-config-manager \ 	--add-repo \  https://download.</description>
+    </item>
+    
+  </channel>
+</rss>

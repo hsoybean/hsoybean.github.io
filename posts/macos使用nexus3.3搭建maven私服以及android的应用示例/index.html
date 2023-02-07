@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <title>MacOS使用Nexus3 // Ds.H</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ds.H" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.3c3c186cd62e563ad6e2f00a89dbee656ab912d1d46f856b5605dd0232521e2a.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MacOS使用Nexus3"/>
+<meta name="twitter:description" content="操作系统: MacOS(Bigbur)
+一. 关于Nexus 1. Nexus是什么 nexus是一个强大的maven仓库管理器,它极大的简化了本地内部仓库的维护和外部仓库的访问. nexus是一套开箱即用的系统不需要数据库,它使用文件系统加Lucene来组织数据nexus使用ExtJS来开发界面,利用Restlet来提供完整的REST APIs,通过IDEA和Eclipse集成使用nexus支持webDAV与LDAP安全身份认证.nexus提供了强大的仓库管理功能,构件搜索功能,它基于REST,友好的UI是一个extjs的REST客户端,占用较少的内存,基于简单文件系统而非数据库.
+2016 年 4 月 6 日 Nexus 3.0 版本发布，相较 2.x 版本有了很大的改变：
+  对低层代码进行了大规模重构，提升性能，增加可扩展性以及改善用户体验。
+  升级界面，极大的简化了用户界面的操作和管理。
+  提供新的安装包，让部署更加简单。
+  增加对 Docker, NeGet, npm, Bower 的支持。
+  提供新的管理接口，以及增强对自动任务的管理。
+  1. Nexus作用 nexus是一种特殊的maven仓库, 一般用于公司, 比如公司员工开发项目, 需要每个人都去互联网上下载jar包, 这个如果外网网速不太好的好, 是比较痛苦的, 而且如果把自己的jar包上传到外部服务器,这个也是比较危险的, 此时,公司就需要搭建一个私服, 可以提供大家去私服下载jar包, 而且开发人员封装好自己的工具以后, 也可以直接发布到私服上, 其他的开发人员有额可以直接下载下来. 总结一下，就是减少多个本地仓库频繁去下载远程仓库的同一个库，Nexus会把远程库下载到私服缓存，另外就是用于公司内部库开发同步和版本管理。
+二. Nexus安装 官网地址：https://www.sonatype.com/nexus/repository-oss-download
+1. 解压配置 解压得到nexus-3.30.0-01和sonatype-work两个文件夹
+vim nexus-3.30.0-01/etc/nexus-default.properties ## DO NOT EDIT - CUSTOMIZATIONS BELONG IN $data-dir/etc/nexus."/>
+
+    <meta property="og:title" content="MacOS使用Nexus3" />
+<meta property="og:description" content="操作系统: MacOS(Bigbur)
+一. 关于Nexus 1. Nexus是什么 nexus是一个强大的maven仓库管理器,它极大的简化了本地内部仓库的维护和外部仓库的访问. nexus是一套开箱即用的系统不需要数据库,它使用文件系统加Lucene来组织数据nexus使用ExtJS来开发界面,利用Restlet来提供完整的REST APIs,通过IDEA和Eclipse集成使用nexus支持webDAV与LDAP安全身份认证.nexus提供了强大的仓库管理功能,构件搜索功能,它基于REST,友好的UI是一个extjs的REST客户端,占用较少的内存,基于简单文件系统而非数据库.
+2016 年 4 月 6 日 Nexus 3.0 版本发布，相较 2.x 版本有了很大的改变：
+  对低层代码进行了大规模重构，提升性能，增加可扩展性以及改善用户体验。
+  升级界面，极大的简化了用户界面的操作和管理。
+  提供新的安装包，让部署更加简单。
+  增加对 Docker, NeGet, npm, Bower 的支持。
+  提供新的管理接口，以及增强对自动任务的管理。
+  1. Nexus作用 nexus是一种特殊的maven仓库, 一般用于公司, 比如公司员工开发项目, 需要每个人都去互联网上下载jar包, 这个如果外网网速不太好的好, 是比较痛苦的, 而且如果把自己的jar包上传到外部服务器,这个也是比较危险的, 此时,公司就需要搭建一个私服, 可以提供大家去私服下载jar包, 而且开发人员封装好自己的工具以后, 也可以直接发布到私服上, 其他的开发人员有额可以直接下载下来. 总结一下，就是减少多个本地仓库频繁去下载远程仓库的同一个库，Nexus会把远程库下载到私服缓存，另外就是用于公司内部库开发同步和版本管理。
+二. Nexus安装 官网地址：https://www.sonatype.com/nexus/repository-oss-download
+1. 解压配置 解压得到nexus-3.30.0-01和sonatype-work两个文件夹
+vim nexus-3.30.0-01/etc/nexus-default.properties ## DO NOT EDIT - CUSTOMIZATIONS BELONG IN $data-dir/etc/nexus." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/macos%E4%BD%BF%E7%94%A8nexus3.3%E6%90%AD%E5%BB%BAmaven%E7%A7%81%E6%9C%8D%E4%BB%A5%E5%8F%8Aandroid%E7%9A%84%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-07T00:00:00+00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://example.com"><img class="app-header-avatar" src="/images/avatar.jpg" alt="Ds.H" /></a>
+      <span class="app-header-title">Ds.H</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">主页</a>
+             . 
+          
+          <a class="app-header-menu-item" href="/tags/">标签</a>
+             . 
+          
+          <a class="app-header-menu-item" href="/about/">联系我</a>
+      </nav>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">MacOS使用Nexus3</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Feb 7, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://example.com/tags/android/">Android</a>
+              <a class="tag" href="https://example.com/tags/nexus/">Nexus</a>
+              <a class="tag" href="https://example.com/tags/maven/">Maven</a>
+              <a class="tag" href="https://example.com/tags/%E5%BC%80%E5%8F%91/">开发</a>
+              <a class="tag" href="https://example.com/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>操作系统: MacOS(Bigbur)</p>
+<h2 id="一--关于nexus">一.  关于Nexus</h2>
+<h4 id="1-nexus是什么">1. Nexus是什么</h4>
+<p>nexus是一个强大的maven仓库管理器,它极大的简化了本地内部仓库的维护和外部仓库的访问. nexus是一套开箱即用的系统不需要数据库,它使用文件系统加Lucene来组织数据nexus使用ExtJS来开发界面,利用Restlet来提供完整的REST APIs,通过IDEA和Eclipse集成使用nexus支持webDAV与LDAP安全身份认证.nexus提供了强大的仓库管理功能,构件搜索功能,它基于REST,友好的UI是一个extjs的REST客户端,占用较少的内存,基于简单文件系统而非数据库.</p>
+<p>2016 年 4 月 6 日 Nexus 3.0 版本发布，相较 2.x 版本有了很大的改变：</p>
+<ul>
+<li>
+<p>对低层代码进行了大规模重构，提升性能，增加可扩展性以及改善用户体验。</p>
+</li>
+<li>
+<p>升级界面，极大的简化了用户界面的操作和管理。</p>
+</li>
+<li>
+<p>提供新的安装包，让部署更加简单。</p>
+</li>
+<li>
+<p>增加对 Docker, NeGet, npm, Bower 的支持。</p>
+</li>
+<li>
+<p>提供新的管理接口，以及增强对自动任务的管理。</p>
+</li>
+</ul>
+<h4 id="1-nexus作用">1. Nexus作用</h4>
+<p>nexus是一种特殊的maven仓库, 一般用于公司, 比如公司员工开发项目, 需要每个人都去互联网上下载jar包, 这个如果外网网速不太好的好, 是比较痛苦的, 而且如果把自己的jar包上传到外部服务器,这个也是比较危险的, 此时,公司就需要搭建一个私服, 可以提供大家去私服下载jar包, 而且开发人员封装好自己的工具以后, 也可以直接发布到私服上, 其他的开发人员有额可以直接下载下来.
+总结一下，就是减少多个本地仓库频繁去下载远程仓库的同一个库，Nexus会把远程库下载到私服缓存，另外就是用于公司内部库开发同步和版本管理。</p>
+<h2 id="二--nexus安装">二.  Nexus安装</h2>
+<p>官网地址：https://www.sonatype.com/nexus/repository-oss-download</p>
+<h4 id="1-解压配置">1. 解压配置</h4>
+<p>解压得到nexus-3.30.0-01和sonatype-work两个文件夹</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim nexus-3.30.0-01/etc/nexus-default.properties
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">## DO NOT EDIT - CUSTOMIZATIONS BELONG IN $data-dir/etc/nexus.properties</span>
+<span style="color:#75715e">##</span>
+<span style="color:#75715e"># Jetty section         </span>
+application-port<span style="color:#f92672">=</span><span style="color:#ae81ff">8081</span>                                                    
+application-host<span style="color:#f92672">=</span>0.0.0.0
+nexus-args<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>jetty.etc<span style="color:#e6db74">}</span>/jetty.xml,<span style="color:#e6db74">${</span>jetty.etc<span style="color:#e6db74">}</span>/jetty-http.xml,<span style="color:#e6db74">${</span>jetty.etc<span style="color:#e6db74">}</span>/jetty-requestlog.xml
+nexus-context-path<span style="color:#f92672">=</span>/
+   
+<span style="color:#75715e"># Nexus section</span>
+nexus-edition<span style="color:#f92672">=</span>nexus-pro-edition
+nexus-features<span style="color:#f92672">=</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span> nexus-pro-feature  
+        
+nexus.hazelcast.discovery.isEnabled<span style="color:#f92672">=</span>true
+</code></pre></div><p>可以修改application-host、application-port、nexus-context-path</p>
+<ul>
+<li>
+<p>application-host ：是你访问的nexus服务器的IP，默认为0.0.0.0（即只要是本机上的IP，就能连上nexus服务器，详解点我）。为了安全和屏蔽掉其他IP，我们可以改访问IP为localhost指向的IP（一般默认指向127.0.0.1），改成本机上其他IP也可以</p>
+</li>
+<li>
+<p>application-port：是IP的端口号，默认为8081，如果端口号被占用，自行换成其他端口号</p>
+</li>
+<li>
+<p>nexus-context-path：上下文对象路径，默认是没有的，如果添加了上下文对象路径，需要在访问地址（访问地址：application-host:application-port）后面加上下文对象路径，即访问地址变为：application-host:application-port/nexus-context-path</p>
+</li>
+</ul>
+<h4 id="2-配置环境变量">2. 配置环境变量</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim ~/.bash_profile
+</code></pre></div><p>添加以下内容</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export NEXUS_HOME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/xxx/xxx/nexus-3.30.0-01-mac/nexus-3.30.0-01/&#34;</span>
+export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$NEXUS_HOME<span style="color:#e6db74">/bin:</span>$PATH<span style="color:#e6db74">:.&#34;</span>
+</code></pre></div><p>:wq 保存退出，source一下使配置生效</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">source ~/.bash_profile
+</code></pre></div><h4 id="3-运行nexus">3. 运行Nexus</h4>
+<p>前台运行：nexus run<!-- raw HTML omitted -->
+后台运行： nexus start<!-- raw HTML omitted -->
+查看状态：nexus status<!-- raw HTML omitted -->
+浏览器打开： 127.0.0.1:8081，显示管理页面表示启动成功<!-- raw HTML omitted --></p>
+<h2 id="三--nexus使用介绍">三.  Nexus使用介绍</h2>
+<h4 id="1仓库存储类型">1.仓库存储类型</h4>
+<ul>
+<li>Release（正式版）： 正式版，适合项目稳定后正式发布使用，特性看下面的原理简介 [important]。</li>
+<li>Snapshot（快照版）： 快照版，适合项目在开发调试中使用，特性看下面的原理简介 [important] 。</li>
+<li>Mixed（混合版）： 可包含release和snapshot版本</li>
+</ul>
+<p>前面两种常用类型介绍：</p>
+<ul>
+<li>对于Release版本的项目： 当项目中添加了一个正式版的version为x的依赖时，构建工具在构建项目时会从远程仓库中下载这个version为x的依赖到本地仓库缓存起来，下次再构建项目时，构建工具会从本地仓库中查找是否存在这个version为x的依赖，存在就不会在去远程仓库中拉取。这种特性会导致在团队开发中，如果你发布一个正式版的项目时，仍然使用的是同一个version，就可能出现其他使用这个version项目的成员根本接收不到项目的最新变更，这是糟糕的，为了生命安全，大家尽量不要这么做。所以，在每次发布正式版项目时，必须更新version。</li>
+<li>对于Snapshot版本的项目： 当项目中添加了一个快照版的version为x的依赖时，不管本地仓库中是否存在这个version为x的依赖，构建工具都会尝试从远程仓库中查看这个version为x的依赖是否最新。这样就能保证团队开发时，所有使用这个version为x的依赖的项目都能获取到依赖最新的变更，而且不用不停的迭代依赖的version。最后一还有一点，Snapshot版项目发布时的version一定要以-SNAPSHOT结尾，英文字母必须大写。</li>
+</ul>
+<h4 id="2仓库类型">2.仓库类型</h4>
+<ul>
+<li>hosted(宿主仓库) ：专门存放无法从远程仓库中下载的构件或者公司内部自主开发的一些构件。当hosted仓库找不到目标构件时，并不能从远程仓库下载。并且想要将内部开发构件上传到maven仓库，三种仓库中只能使用hosted。</li>
+<li>proxy(代理仓库) ： 当用户向proxy请求一个资源时，proxy会先在本地仓库中寻找是否有该资源，没有的话会从远程仓库下载，然后返回给用户；同时会缓存在本地，下次用户再请求相同资源时，就可以直接在本地中找到并返回给用户。proxy起到一层缓存与中转的作用。
+proxy代理的远程仓库可以配置，这里我选择阿里云的maven仓库（http://maven.aliyun.com/nexus/content/groups/public/，因为在国内比中央仓库快很多）
+（注意：不支持将内部自主研发的项目上传到proxy上，只能上传到hosted中，proxy的主要作用只是缓存从远程仓库下载的资源和作为中转站去远程仓库下载需要的资源）</li>
+<li>group(仓库组) ：多个仓库的聚合体，将你在nexus中想要使用的maven仓库聚合在一起，对用户暴露统一的地址，这样用户就不需在项目中配置多个maven地址了。（同样也不支持将内部研发项目上传到group中，只能发布到hosted）
+根据需要添加：</li>
+</ul>
+<p><img src="https://www.championai.com/upload/2021/03/image-f7a9bcfdf47b4d469d0d58ba3f8c848a.png" alt="image"></p>
+<p>group类型的仓库添加其他仓库需要注意优先顺序，下载库的时候是从上到下的
+<img src="https://www.championai.com/upload/2021/03/image-967da8c9326944ae8320ec41247c5c82.png" alt="image"></p>
+<p>release类型
+<img src="https://www.championai.com/upload/2021/03/image-0e297777ea664d09923f6a2a13565a44.png" alt="image"></p>
+<p>snapshot类型
+<img src="https://www.championai.com/upload/2021/03/image-7fd590fbaf494d4bbd35e006054a0476.png" alt="image"></p>
+<p>proxy类型的（类似google()的远程仓库放到私服group仓库里面统一管理，这样在项目里面就不需要添加很多远程库地址了）
+<img src="https://www.championai.com/upload/2021/03/image-716dea837bc147b5a93a5f51a60eb8fa.png" alt="image.png"></p>
+<h2 id="四-项目应用">四. 项目应用</h2>
+<h4 id="1-使用gradle自动发布">1. 使用gradle自动发布</h4>
+<p>在需要发布的module的build.gradle中加入如下代码</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
+  id <span style="color:#e6db74">&#39;com.android.library&#39;</span> <span style="color:#75715e">//这里一定要是library，不能是application
+</span><span style="color:#75715e"></span>  id <span style="color:#e6db74">&#39;maven&#39;</span>
+<span style="color:#f92672">}</span>
+android <span style="color:#f92672">{</span>
+    <span style="color:#f92672">...</span>
+<span style="color:#f92672">}</span>
+dependencies <span style="color:#f92672">{</span>
+    <span style="color:#f92672">...</span>
+<span style="color:#f92672">}</span>
+uploadArchives <span style="color:#f92672">{</span>
+    configuration <span style="color:#f92672">=</span> configurations<span style="color:#f92672">.</span><span style="color:#a6e22e">archives</span>
+    repositories <span style="color:#f92672">{</span>
+        mavenDeployer <span style="color:#f92672">{</span>
+            <span style="color:#75715e">// 仓库路径（只能是hosted仓库）
+</span><span style="color:#75715e"></span>            repository<span style="color:#f92672">(</span>url: <span style="color:#e6db74">&#34;http://127.0.0.1:8081/repository/maven-android-release/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#75715e">// 你 Nexus 的账户密码
+</span><span style="color:#75715e"></span>                authentication<span style="color:#f92672">(</span>userName: <span style="color:#e6db74">&#34;admin&#34;</span><span style="color:#f92672">,</span> password: <span style="color:#e6db74">&#34;xxx&#34;</span><span style="color:#f92672">)</span>
+            <span style="color:#f92672">}</span>
+            snapshotRepository<span style="color:#f92672">(</span>url: <span style="color:#e6db74">&#34;http://127.0.0.1:8081/repository/maven-android-snapshot/&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                authentication<span style="color:#f92672">(</span>userName: <span style="color:#e6db74">&#34;admin&#34;</span><span style="color:#f92672">,</span> password: <span style="color:#e6db74">&#34;xxx&#34;</span><span style="color:#f92672">)</span>
+            <span style="color:#f92672">}</span>
+            pom<span style="color:#f92672">.</span><span style="color:#a6e22e">project</span> <span style="color:#f92672">{</span>
+                version <span style="color:#e6db74">&#39;1.0.0-SNAPSHOT&#39;</span>
+                artifactId <span style="color:#e6db74">&#39;m-common&#39;</span>
+                groupId <span style="color:#e6db74">&#39;com.common.lib&#39;</span>
+                description <span style="color:#e6db74">&#39;common&#39;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>其中maven-android-release和maven-android-snapshot是新建的两个hosts类型的仓库，我们本地的代码只能发布到hosts类型仓库
+点击对应仓库URL列里面的copy按钮得到Release存储类型的地址（http://127.0.0.1:8081/repository/maven-android-release/）和
+用于开发的SNAPSHOT快照存储类型的地址（http://127.0.0.1:8081/repository/maven-android-snapshot/) <!-- raw HTML omitted -->
+另外使用group类型的仓库用来连接我们上传的Release、Snapshot库和远程库（所有需要的远程都可以添加），这个是在项目中使用的，这样就能统一管理所有需要的仓库<!-- raw HTML omitted --></p>
+<p>其他构建工具上传配置,可参考官方文档：https://help.sonatype.com/repomanager3/formats/maven-repositories</p>
+<h4 id="2-module中使用发布的项目">2. module中使用发布的项目</h4>
+<p>在工程build.gradle文件中配置(连接Nexus私服地址，使用上面新建的group仓库)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">buildscript <span style="color:#f92672">{</span>
+  repositories <span style="color:#f92672">{</span>
+          maven <span style="color:#f92672">{</span> url <span style="color:#e6db74">&#34;http://127.0.0.1:8081/repository/maven-android-public/&#34;</span><span style="color:#f92672">}</span>
+      <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+allprojects <span style="color:#f92672">{</span>
+    repositories <span style="color:#f92672">{</span>
+        maven <span style="color:#f92672">{</span>
+          url <span style="color:#e6db74">&#34;http://127.0.0.1:8081/repository/maven-android-public/&#34;</span><span style="color:#f92672">}</span>
+  
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>在项目build.gradle文件中添加依赖</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy"><span style="color:#75715e">/** 以下设置是因为gradle 有缓存机制，而且默认的缓存时间是24 小时，    
+</span><span style="color:#75715e"> * 所以需要进行如下配置，修改gradle缓存时间为 0 秒，
+</span><span style="color:#75715e"> * 来达到SNAPSHOT aar立即生效的效果 */</span>
+configurations<span style="color:#f92672">.</span><span style="color:#a6e22e">all</span> <span style="color:#f92672">{</span>
+<span style="color:#75715e">//    resolutionStrategy.cacheDynamicVersionsFor 0, &#39;seconds&#39; // 动态版本,例如 3+，latest.integration
+</span><span style="color:#75715e"></span>    resolutionStrategy<span style="color:#f92672">.</span><span style="color:#a6e22e">cacheChangingModulesFor</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#39;seconds&#39;</span> <span style="color:#75715e">// 变化模块
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+dependencies <span style="color:#f92672">{</span>
+  <span style="color:#f92672">...</span>
+  implementation <span style="color:#e6db74">&#39;com.common.lib:m-common:1.0.0-SNAPSHOT&#39;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
