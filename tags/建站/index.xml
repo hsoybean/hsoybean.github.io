@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>建站 on Ds.H</title>
-    <link>https://example.com/tags/%E5%BB%BA%E7%AB%99/</link>
+    <link>https://hsoybean.github.io/tags/%E5%BB%BA%E7%AB%99/</link>
     <description>Recent content in 建站 on Ds.H</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/%E5%BB%BA%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hsoybean.github.io/tags/%E5%BB%BA%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>开源博客系统Halo安装及使用</title>
-      <link>https://example.com/posts/%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9Fhalo%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</link>
+      <link>https://hsoybean.github.io/posts/%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9Fhalo%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9Fhalo%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</guid>
+      <guid>https://hsoybean.github.io/posts/%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9Fhalo%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/</guid>
       <description>操作系统: Centos 7.x
 一. 安装宝塔面板 1. 更新yum yum update 2. 使用yum安装面板 官方安装文档：https://www.bt.cn/bbs/thread-19376-1-1.html
 yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;amp;&amp;amp; sh install.sh 出现以上信息，说明宝塔面板已经安装完成。 根据信息内容中的外网面板地址在浏览器打开,输入username和password登陆面板。（如果忘记username和password，可以在服务器linux命令行使用 bt default来查看） 第一次登陆进面板之后，会有个提示安装LNMP和LAMP的环境套件，这里我选择LNMP（linux Nginx mySql PHP），安装方式选择“极速安装”，点击一键安装。

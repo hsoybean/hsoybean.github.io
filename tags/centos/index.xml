@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>centOS on Ds.H</title>
-    <link>https://example.com/tags/centos/</link>
+    <link>https://hsoybean.github.io/tags/centos/</link>
     <description>Recent content in centOS on Ds.H</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hsoybean.github.io/tags/centos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CentOS 7.x使用yum安装JDK1.8</title>
-      <link>https://example.com/posts/centos-7.x%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85jdk1.8/</link>
+      <link>https://hsoybean.github.io/posts/centos-7.x%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85jdk1.8/</link>
       <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/centos-7.x%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85jdk1.8/</guid>
+      <guid>https://hsoybean.github.io/posts/centos-7.x%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85jdk1.8/</guid>
       <description>操作系统: Centos 7.x
 一. 安装JDK 1. yum源查找JDK版本安装包 查找所有java关键字匹配的安装包
 yum search java* 查找java1.8版本相关的安装包
@@ -24,10 +24,10 @@ source ~/.bash_profile 测试是否安装完成： 任意目录下执行命令�
     
     <item>
       <title>Centos安装shadowsock客户端配合privoxy实现Linux全局代理</title>
-      <link>https://example.com/posts/centos%E5%AE%89%E8%A3%85shadowsock%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E5%90%88privoxy%E5%AE%9E%E7%8E%B0linux%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/</link>
+      <link>https://hsoybean.github.io/posts/centos%E5%AE%89%E8%A3%85shadowsock%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E5%90%88privoxy%E5%AE%9E%E7%8E%B0linux%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/</link>
       <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/centos%E5%AE%89%E8%A3%85shadowsock%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E5%90%88privoxy%E5%AE%9E%E7%8E%B0linux%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/</guid>
+      <guid>https://hsoybean.github.io/posts/centos%E5%AE%89%E8%A3%85shadowsock%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E5%90%88privoxy%E5%AE%9E%E7%8E%B0linux%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/</guid>
       <description>操作系统: Centos 7.x
 一. 安装Shadowsocks客户端 1. 安装epel source(这个用于自动配置yum仓库)和pip(python包管理工具) sudo yum -y install epel-release sudo yum -y install python-pip 2. 安装Shadowsocks客户端 sudo pip install shadowsocks 二. 配置Shadowsocks 1.新建配置文件 sudo mkdir /etc/shadowsocks sudo vim /etc/shadowsocks/shadowsocks.json 2.在shadowsocks.json文件中添加配置信息 { &amp;#34;server&amp;#34;:&amp;#34;x.x.x.x&amp;#34;, # 代理服务器地址 &amp;#34;server_port&amp;#34;:1035, # 代理服务器端口 &amp;#34;local_address&amp;#34;: &amp;#34;127.0.0.1&amp;#34;, # 本地ip &amp;#34;local_port&amp;#34;:1080, # 本地端口 &amp;#34;password&amp;#34;:&amp;#34;password&amp;#34;, # 服务器连接密码 &amp;#34;timeout&amp;#34;:300, # 等待超时 &amp;#34;method&amp;#34;:&amp;#34;aes-256-cfb&amp;#34;, # 协议加密方式 &amp;#34;fast_open&amp;#34;: false, # true快速打开以减少延时，但是要求Linux内核是3.7+ &amp;#34;workers&amp;#34;: 1 # 工作线程数量 } 3.开启shadowsocks，添加自启动 sudo mkdir /etc/systemd/system/shadowsocks.service vim /etc/systemd/system/shadowsocks.</description>
     </item>

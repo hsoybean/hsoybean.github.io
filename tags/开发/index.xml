@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>开发 on Ds.H</title>
-    <link>https://example.com/tags/%E5%BC%80%E5%8F%91/</link>
+    <link>https://hsoybean.github.io/tags/%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 开发 on Ds.H</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hsoybean.github.io/tags/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CentOS 7.x使用yum安装JDK1.8</title>
-      <link>https://example.com/posts/centos-7.x%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85jdk1.8/</link>
+      <link>https://hsoybean.github.io/posts/centos-7.x%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85jdk1.8/</link>
       <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/centos-7.x%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85jdk1.8/</guid>
+      <guid>https://hsoybean.github.io/posts/centos-7.x%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85jdk1.8/</guid>
       <description>操作系统: Centos 7.x
 一. 安装JDK 1. yum源查找JDK版本安装包 查找所有java关键字匹配的安装包
 yum search java* 查找java1.8版本相关的安装包
@@ -24,10 +24,10 @@ source ~/.bash_profile 测试是否安装完成： 任意目录下执行命令�
     
     <item>
       <title>MacOS使用Nexus3</title>
-      <link>https://example.com/posts/macos%E4%BD%BF%E7%94%A8nexus3.3%E6%90%AD%E5%BB%BAmaven%E7%A7%81%E6%9C%8D%E4%BB%A5%E5%8F%8Aandroid%E7%9A%84%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B/</link>
+      <link>https://hsoybean.github.io/posts/macos%E4%BD%BF%E7%94%A8nexus3.3%E6%90%AD%E5%BB%BAmaven%E7%A7%81%E6%9C%8D%E4%BB%A5%E5%8F%8Aandroid%E7%9A%84%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B/</link>
       <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/macos%E4%BD%BF%E7%94%A8nexus3.3%E6%90%AD%E5%BB%BAmaven%E7%A7%81%E6%9C%8D%E4%BB%A5%E5%8F%8Aandroid%E7%9A%84%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B/</guid>
+      <guid>https://hsoybean.github.io/posts/macos%E4%BD%BF%E7%94%A8nexus3.3%E6%90%AD%E5%BB%BAmaven%E7%A7%81%E6%9C%8D%E4%BB%A5%E5%8F%8Aandroid%E7%9A%84%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B/</guid>
       <description>操作系统: MacOS(Bigbur)
 一. 关于Nexus 1. Nexus是什么 nexus是一个强大的maven仓库管理器,它极大的简化了本地内部仓库的维护和外部仓库的访问. nexus是一套开箱即用的系统不需要数据库,它使用文件系统加Lucene来组织数据nexus使用ExtJS来开发界面,利用Restlet来提供完整的REST APIs,通过IDEA和Eclipse集成使用nexus支持webDAV与LDAP安全身份认证.nexus提供了强大的仓库管理功能,构件搜索功能,它基于REST,友好的UI是一个extjs的REST客户端,占用较少的内存,基于简单文件系统而非数据库.
 2016 年 4 月 6 日 Nexus 3.0 版本发布，相较 2.x 版本有了很大的改变：
