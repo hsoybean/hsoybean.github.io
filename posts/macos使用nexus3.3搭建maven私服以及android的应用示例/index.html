@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="zh-cn">
   <head>
-    <title>MacOS使用Nexus3 // Ds.H</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <title>MacOS使用Nexus3 </title>
+    <link rel="shortcut icon" href="/images/logo.png" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.87.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -58,9 +58,9 @@ vim nexus-3.30.0-01/etc/nexus-default.properties ## DO NOT EDIT - CUSTOMIZATIONS
           <a class="app-header-menu-item" href="/tags/">标签</a>
              . 
           
-          <a class="app-header-menu-item" href="/about/">联系我</a>
+          <a class="app-header-menu-item" href="/contactus/">联系我</a>
       </nav>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>我还是个孩子</p>
     </header>
     <main class="app-container">
       
@@ -185,15 +185,15 @@ proxy代理的远程仓库可以配置，这里我选择阿里云的maven仓库�
 <li>group(仓库组) ：多个仓库的聚合体，将你在nexus中想要使用的maven仓库聚合在一起，对用户暴露统一的地址，这样用户就不需在项目中配置多个maven地址了。（同样也不支持将内部研发项目上传到group中，只能发布到hosted）
 根据需要添加：</li>
 </ul>
-<p><img src="https://www.championai.com/upload/2021/03/image-f7a9bcfdf47b4d469d0d58ba3f8c848a.png" alt="image"></p>
+<p><img src="/images/assert/image-f7a9bcfdf47b4d469d0d58ba3f8c848a.png" alt="image"></p>
 <p>group类型的仓库添加其他仓库需要注意优先顺序，下载库的时候是从上到下的
-<img src="https://www.championai.com/upload/2021/03/image-967da8c9326944ae8320ec41247c5c82.png" alt="image"></p>
+<img src="/images/assert/image-967da8c9326944ae8320ec41247c5c82.png" alt="image"></p>
 <p>release类型
-<img src="https://www.championai.com/upload/2021/03/image-0e297777ea664d09923f6a2a13565a44.png" alt="image"></p>
+<img src="/images/assert/image-0e297777ea664d09923f6a2a13565a44.png" alt="image"></p>
 <p>snapshot类型
-<img src="https://www.championai.com/upload/2021/03/image-7fd590fbaf494d4bbd35e006054a0476.png" alt="image"></p>
+<img src="/images/assert/image-7fd590fbaf494d4bbd35e006054a0476.png" alt="image"></p>
 <p>proxy类型的（类似google()的远程仓库放到私服group仓库里面统一管理，这样在项目里面就不需要添加很多远程库地址了）
-<img src="https://www.championai.com/upload/2021/03/image-716dea837bc147b5a93a5f51a60eb8fa.png" alt="image.png"></p>
+<img src="/images/assert/image-716dea837bc147b5a93a5f51a60eb8fa.png" alt="image.png"></p>
 <h2 id="四-项目应用">四. 项目应用</h2>
 <h4 id="1-使用gradle自动发布">1. 使用gradle自动发布</h4>
 <p>在需要发布的module的build.gradle中加入如下代码</p>
